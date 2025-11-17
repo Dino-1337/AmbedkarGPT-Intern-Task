@@ -1,0 +1,1022 @@
+{
+  "experiment": "large",
+  "chunk_size": 900,
+  "overlap": 100,
+  "top_k": 3,
+  "aggregated": {
+    "hit_rate": 0.88,
+    "mrr": 0.7933333333333334,
+    "precision_at_3": 0.38666666666666666,
+    "mean_rouge_l": 0.3496418172767771,
+    "mean_bleu": 0.13189326323437478,
+    "mean_cosine": 0.5539793178563848,
+    "mean_relevance": 0.5539793178563848,
+    "mean_faithfulness": 0.4983697022120921,
+    "num_questions": 25,
+    "chunk_size": 900,
+    "overlap": 100
+  },
+  "per_question": [
+    {
+      "id": 1,
+      "question": "What is the real remedy for caste system according to Document 1?",
+      "ground_truth": "The real remedy is to destroy the belief in the sanctity of the shastras.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_0",
+          "content": "The real remedy is to destroy the belief in the sanctity of the shastras. How do you expect to succeed if you allow the shastras to \ncontinue to be held as sacred and infallible? You must take a stand against the scriptures. Either you must stop the practice of \ncaste or you must stop believing in the shastras. You cannot have both. The problem of caste is not a problem of social reform. It \nis a problem of overthrowing the authority of the shastras. So long as people believe in the sanctity of the shastras, they will \nnever be able to get rid of caste. The work of social reform is like the work of a gardener who is constantly pruning the leaves and \nbranches of a tree without ever attacking the roots. The real enemy is the belief in the shastras. What is your ideal society? My ideal society would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition.",
+          "score": 0.3946061134338379,
+          "source": "speech1.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.49654918909072876,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.6647499799728394,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "The real remedy for the caste system, as per Document 1, lies in challenging the authority of the shastras (scriptures) and overthrowing their perceived sanctity. This is because, as stated in the text, as long as people believe in the shastras, they will never be able to eradicate caste. The solution proposed involves fighting against the scriptures or stopping the practice of caste.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.6666666666666666,
+        "rouge_l": 0.23376623376623376,
+        "bleu": 0.026560295453104787,
+        "cosine": 0.727552995478069,
+        "relevance": 0.727552995478069,
+        "faithfulness": 0.7013266758102488
+      }
+    },
+    {
+      "id": 2,
+      "question": "What does Ambedkar say about the Buddha's view on rituals in Document 2?",
+      "ground_truth": "The Buddha was against ritualism, condemned sacrifices, rejected Vedic authority, denied prayer efficacy, and discarded gods.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.47074949741363525,
+          "source": "speech2.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.7657628059387207,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.7766410112380981,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Not available in the provided text. The context given does not contain information about Dr. Ambedkar's interpretation of the Buddha's views on rituals in Document 2.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.13636363636363635,
+        "bleu": 0.014614031921776127,
+        "cosine": 0.5400314532876854,
+        "relevance": 0.5400314532876854,
+        "faithfulness": 0.44457164852836517
+      }
+    },
+    {
+      "id": 3,
+      "question": "What two types of constitutional remedies does Ambedkar mention in Document 3?",
+      "ground_truth": "Fundamental rights which are justiciable, and directive principles which are not justiciable.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.5926215052604675,
+          "source": "speech3.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.7623443603515625,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.7657985687255859,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Document 3, Ambedkar mentions two types of constitutional remedies: first, fundamental rights which are justiciable, and second, directive principles which are not justiciable.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.6666666666666666,
+        "bleu": 0.37808509356806524,
+        "cosine": 0.7106645982368796,
+        "relevance": 0.7106645982368796,
+        "faithfulness": 0.4677797612834327
+      }
+    },
+    {
+      "id": 4,
+      "question": "What personal experiences of untouchability does Ambedkar describe in Document 4?",
+      "ground_truth": "Not allowed to drink from public wells, not allowed to enter temples, forced to live outside villages.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.5533633232116699,
+          "source": "speech6.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_4",
+          "content": "I was born in the untouchable community. I have faced the stigma of untouchability from my childhood. I know what it means to \nbe an untouchable. I know the humiliation, the insults, the injustices. I remember how we were not allowed to drink water from \nthe public well. I remember how we were not allowed to enter the temple. I remember how we were forced to live outside the \nvillage. Education is the key to liberation. Without education, the untouchables can never achieve their rightful place in society. I \nstruggled for education against all odds. I went to school sitting outside the classroom. I studied under street lights when I had no \nmoney for kerosene. But I was determined to get educated. Education gave me the strength to fight against injustice.",
+          "score": 0.5997670888900757,
+          "source": "speech4.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.7943817377090454,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Ambedkar, in Document 4, describes personal experiences of untouchability such as being denied access to public resources like water from the well and temples, being forced to live outside the village, and facing humiliation, insults, and injustices since his childhood due to being born into the untouchable community.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 0.5,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.27692307692307694,
+        "bleu": 0.058520616494745624,
+        "cosine": 0.5339292741619588,
+        "relevance": 0.5339292741619588,
+        "faithfulness": 0.6368999483313004
+      }
+    },
+    {
+      "id": 5,
+      "question": "Why does Ambedkar believe Pakistan's creation was inevitable in Document 5?",
+      "ground_truth": "Because Hindus and Muslims are two separate nations with different religions, cultures, and historical backgrounds who cannot live under one domination.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_5",
+          "content": "The Hindu-Muslim problem is fundamentally a problem of nationalities. The Hindus and Muslims are not two communities but \ntwo nations. They have different religions, different cultures, different languages, and different historical backgrounds. The \nMuslims have a consciousness of being a separate nation. They want to have their own homeland, their own national state. The creation of Pakistan is inevitable. The Muslims cannot live under Hindu domination. They must have a separate state where \nthey can develop according to their own culture and civilization. The unity of India is artificial. It was created by the British. Before \nthe British, India was never united. The partition of India is the only solution to the Hindu-Muslim problem.",
+          "score": 0.48084038496017456,
+          "source": "speech5.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.7735327482223511,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.8545413017272949,
+          "source": "speech2.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "According to the provided context, Ambedkar believes that the creation of Pakistan is inevitable because the Muslims are a separate nation with different cultures, languages, and historical backgrounds than Hindus. They seek their own homeland due to being unable to live under Hindu domination.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.43076923076923074,
+        "bleu": 0.08552025245839975,
+        "cosine": 0.5724971668601608,
+        "relevance": 0.5724971668601608,
+        "faithfulness": 0.5860086326070382
+      }
+    },
+    {
+      "id": 6,
+      "question": "Who does Ambedkar call 'broken men' in Document 6 and why?",
+      "ground_truth": "The untouchables, because they were original inhabitants defeated and subjugated by invading Aryans.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.7928017973899841,
+          "source": "speech6.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.7997308969497681,
+          "source": "speech2.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.8637552261352539,
+          "source": "speech3.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Document 6, Ambedkar refers to the untouchables as 'broken men'. He labels them this way because they were subjugated by the invading Aryans, forced to live outside villages, denied basic rights like education and property, and condemned to do menial work.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.32727272727272727,
+        "bleu": 0.03295828165685029,
+        "cosine": 0.5961829646975034,
+        "relevance": 0.5961829646975034,
+        "faithfulness": 0.4878343806947615
+      }
+    },
+    {
+      "id": 7,
+      "question": "Compare Ambedkar's views on education in Documents 4 and 6",
+      "ground_truth": "In Document 4, education is the key to liberation from personal experience. In Document 6, education is essential for political empowerment and organization.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_4",
+          "content": "I was born in the untouchable community. I have faced the stigma of untouchability from my childhood. I know what it means to \nbe an untouchable. I know the humiliation, the insults, the injustices. I remember how we were not allowed to drink water from \nthe public well. I remember how we were not allowed to enter the temple. I remember how we were forced to live outside the \nvillage. Education is the key to liberation. Without education, the untouchables can never achieve their rightful place in society. I \nstruggled for education against all odds. I went to school sitting outside the classroom. I studied under street lights when I had no \nmoney for kerosene. But I was determined to get educated. Education gave me the strength to fight against injustice.",
+          "score": 0.7681976556777954,
+          "source": "speech4.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.7850323915481567,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.7977897524833679,
+          "source": "speech2.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Documents 4 and 6, both emphasize the importance of education for the untouchables, viewing it as a means to liberation and emancipation. However, while Document 6 suggests that political power is also crucial for the untouchables' rights, Document 4 focuses more on personal determination and resilience in obtaining education despite the challenges faced.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.6666666666666666,
+        "rouge_l": 0.3116883116883117,
+        "bleu": 0.015897624108805596,
+        "cosine": 0.7432695476543363,
+        "relevance": 0.7432695476543363,
+        "faithfulness": 0.5892639610840812
+      }
+    },
+    {
+      "id": 8,
+      "question": "What is Ambedkar's concept of ideal society across Documents 1 and 3?",
+      "ground_truth": "Based on liberty, equality, and fraternity, with both political and social democracy.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.5809832811355591,
+          "source": "speech1.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.642528235912323,
+          "source": "speech3.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_0",
+          "content": "The real remedy is to destroy the belief in the sanctity of the shastras. How do you expect to succeed if you allow the shastras to \ncontinue to be held as sacred and infallible? You must take a stand against the scriptures. Either you must stop the practice of \ncaste or you must stop believing in the shastras. You cannot have both. The problem of caste is not a problem of social reform. It \nis a problem of overthrowing the authority of the shastras. So long as people believe in the sanctity of the shastras, they will \nnever be able to get rid of caste. The work of social reform is like the work of a gardener who is constantly pruning the leaves and \nbranches of a tree without ever attacking the roots. The real enemy is the belief in the shastras. What is your ideal society? My ideal society would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition.",
+          "score": 0.6480696797370911,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Ambedkar's concept of an ideal society, as depicted in both documents 1 and 3, is one based on liberty, equality, and fraternity. He emphasizes the importance of this society not being bound by tradition and believes that the caste system must be abolished to achieve this ideal, which involves overthrowing the authority of the shastras (holy texts).",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 1.0,
+        "rouge_l": 0.2,
+        "bleu": 0.10818626261296714,
+        "cosine": 0.4174325022422691,
+        "relevance": 0.4174325022422691,
+        "faithfulness": 0.620988274642803
+      }
+    },
+    {
+      "id": 9,
+      "question": "How does Ambedkar relate political power to social change in Documents 3 and 6?",
+      "ground_truth": "In Document 3, constitutional rights protect minorities. In Document 6, political power is essential for untouchables' emancipation.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.6250669360160828,
+          "source": "speech3.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.6778069734573364,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_0",
+          "content": "The real remedy is to destroy the belief in the sanctity of the shastras. How do you expect to succeed if you allow the shastras to \ncontinue to be held as sacred and infallible? You must take a stand against the scriptures. Either you must stop the practice of \ncaste or you must stop believing in the shastras. You cannot have both. The problem of caste is not a problem of social reform. It \nis a problem of overthrowing the authority of the shastras. So long as people believe in the sanctity of the shastras, they will \nnever be able to get rid of caste. The work of social reform is like the work of a gardener who is constantly pruning the leaves and \nbranches of a tree without ever attacking the roots. The real enemy is the belief in the shastras. What is your ideal society? My ideal society would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition.",
+          "score": 0.6888356804847717,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Document 3, Dr. Ambedkar emphasizes that the emancipation of the untouchables (a marginalized class) is impossible without political power. He suggests that they must organize themselves, enter government services, and use political power to protect their interests. In Document 6, he further states that the work of social reform is ineffective without attacking the roots (belief in the sanctity of shastras), implying that political power can be instrumental in bringing about significant changes in society's structure and traditions.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.6666666666666666,
+        "rouge_l": 0.18556701030927836,
+        "bleu": 0.07314924925548238,
+        "cosine": 0.6100608407066367,
+        "relevance": 0.6100608407066367,
+        "faithfulness": 0.726066955965253
+      }
+    },
+    {
+      "id": 10,
+      "question": "What was Ambedkar's favorite food?",
+      "ground_truth": "This information is not available in the provided documents.",
+      "answerable": false,
+      "retrieved": [
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.8528294563293457,
+          "source": "speech2.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.9056715369224548,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_5",
+          "content": "The Hindu-Muslim problem is fundamentally a problem of nationalities. The Hindus and Muslims are not two communities but \ntwo nations. They have different religions, different cultures, different languages, and different historical backgrounds. The \nMuslims have a consciousness of being a separate nation. They want to have their own homeland, their own national state. The creation of Pakistan is inevitable. The Muslims cannot live under Hindu domination. They must have a separate state where \nthey can develop according to their own culture and civilization. The unity of India is artificial. It was created by the British. Before \nthe British, India was never united. The partition of India is the only solution to the Hindu-Muslim problem.",
+          "score": 0.9244343638420105,
+          "source": "speech5.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Not available in the provided text.",
+      "metrics": {
+        "is_hit": false,
+        "reciprocal_rank": 0.0,
+        "precision_at_k": 0.0,
+        "rouge_l": 0.6666666666666667,
+        "bleu": 0.41917424905767126,
+        "cosine": 0.6120053248186881,
+        "relevance": 0.6120053248186881,
+        "faithfulness": 0.07400939551677531
+      }
+    },
+    {
+      "id": 11,
+      "question": "When did Ambedkar visit the United States?",
+      "ground_truth": "This information is not available in the provided documents.",
+      "answerable": false,
+      "retrieved": [
+        {
+          "id": "chunk_5",
+          "content": "The Hindu-Muslim problem is fundamentally a problem of nationalities. The Hindus and Muslims are not two communities but \ntwo nations. They have different religions, different cultures, different languages, and different historical backgrounds. The \nMuslims have a consciousness of being a separate nation. They want to have their own homeland, their own national state. The creation of Pakistan is inevitable. The Muslims cannot live under Hindu domination. They must have a separate state where \nthey can develop according to their own culture and civilization. The unity of India is artificial. It was created by the British. Before \nthe British, India was never united. The partition of India is the only solution to the Hindu-Muslim problem.",
+          "score": 0.8893637657165527,
+          "source": "speech5.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.8947322368621826,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.9177663326263428,
+          "source": "speech2.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Not available in the provided text.",
+      "metrics": {
+        "is_hit": false,
+        "reciprocal_rank": 0.0,
+        "precision_at_k": 0.0,
+        "rouge_l": 0.6666666666666667,
+        "bleu": 0.41917424905767126,
+        "cosine": 0.6120053248186881,
+        "relevance": 0.6120053248186881,
+        "faithfulness": 0.07400939551677531
+      }
+    },
+    {
+      "id": 12,
+      "question": "What is the Dhamma according to Document 2?",
+      "ground_truth": "To avoid evil, to do good, and to purify the mind.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.4893525242805481,
+          "source": "speech2.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.8342159986495972,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_4",
+          "content": "I was born in the untouchable community. I have faced the stigma of untouchability from my childhood. I know what it means to \nbe an untouchable. I know the humiliation, the insults, the injustices. I remember how we were not allowed to drink water from \nthe public well. I remember how we were not allowed to enter the temple. I remember how we were forced to live outside the \nvillage. Education is the key to liberation. Without education, the untouchables can never achieve their rightful place in society. I \nstruggled for education against all odds. I went to school sitting outside the classroom. I studied under street lights when I had no \nmoney for kerosene. But I was determined to get educated. Education gave me the strength to fight against injustice.",
+          "score": 0.8816319108009338,
+          "source": "speech4.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Not available in the provided text. The context [Chunk 2] does not discuss the Buddha's Dhamma. It only mentions the untouchables and their socio-political situation.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.05263157894736842,
+        "bleu": 0.007939087147543497,
+        "cosine": 0.1329751886070095,
+        "relevance": 0.1329751886070095,
+        "faithfulness": 0.6812492254679382
+      }
+    },
+    {
+      "id": 13,
+      "question": "What analogy does Ambedkar use for social reform in Document 1?",
+      "ground_truth": "Like a gardener pruning leaves and branches without attacking the roots.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_0",
+          "content": "The real remedy is to destroy the belief in the sanctity of the shastras. How do you expect to succeed if you allow the shastras to \ncontinue to be held as sacred and infallible? You must take a stand against the scriptures. Either you must stop the practice of \ncaste or you must stop believing in the shastras. You cannot have both. The problem of caste is not a problem of social reform. It \nis a problem of overthrowing the authority of the shastras. So long as people believe in the sanctity of the shastras, they will \nnever be able to get rid of caste. The work of social reform is like the work of a gardener who is constantly pruning the leaves and \nbranches of a tree without ever attacking the roots. The real enemy is the belief in the shastras. What is your ideal society? My ideal society would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition.",
+          "score": 0.7012102007865906,
+          "source": "speech1.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.7180367708206177,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.7259977459907532,
+          "source": "speech3.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Ambedkar uses an analogy of gardening to describe social reform, stating that it is like the work of a gardener who prunes leaves and branches without ever attacking the roots. The real enemy, according to him, is the belief in the sanctity of the shastras.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.39285714285714285,
+        "bleu": 0.10274693680614774,
+        "cosine": 0.47207187566693365,
+        "relevance": 0.47207187566693365,
+        "faithfulness": 0.40834580559711503
+      }
+    },
+    {
+      "id": 14,
+      "question": "What fundamental rights does Ambedkar mention in Document 3?",
+      "ground_truth": "Right to equality, right to freedom, right against exploitation, and right to constitutional remedies.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.6223856210708618,
+          "source": "speech3.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.68328857421875,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.7621257305145264,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Document 3, Ambedkar mentions the fundamental rights of liberty, equality, and fraternity, but he does not specify these as the right to equality, the right to freedom, the right against exploitation, and the right to constitutional remedies as mentioned in Document 1.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.49122807017543857,
+        "bleu": 0.20469758471885896,
+        "cosine": 0.6876714991352415,
+        "relevance": 0.6876714991352415,
+        "faithfulness": 0.6174783038675338
+      }
+    },
+    {
+      "id": 15,
+      "question": "How did Ambedkar struggle for education according to Document 4?",
+      "ground_truth": "Went to school sitting outside classroom, studied under street lights, determined to get educated against all odds.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_4",
+          "content": "I was born in the untouchable community. I have faced the stigma of untouchability from my childhood. I know what it means to \nbe an untouchable. I know the humiliation, the insults, the injustices. I remember how we were not allowed to drink water from \nthe public well. I remember how we were not allowed to enter the temple. I remember how we were forced to live outside the \nvillage. Education is the key to liberation. Without education, the untouchables can never achieve their rightful place in society. I \nstruggled for education against all odds. I went to school sitting outside the classroom. I studied under street lights when I had no \nmoney for kerosene. But I was determined to get educated. Education gave me the strength to fight against injustice.",
+          "score": 0.6252531409263611,
+          "source": "speech4.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.6706752181053162,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.6814368963241577,
+          "source": "speech2.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "According to the context provided, Dr. Ambedkar struggled for education despite facing numerous obstacles as an untouchable. He went to school sitting outside the classroom and studied under street lights when he had no money for kerosene, demonstrating his determination to receive an education which eventually gave him the strength to fight against injustice.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.39436619718309857,
+        "bleu": 0.1115210238918688,
+        "cosine": 0.4505833510575998,
+        "relevance": 0.4505833510575998,
+        "faithfulness": 0.5574308171078631
+      }
+    },
+    {
+      "id": 16,
+      "question": "What does Ambedkar say about the unity of India in Document 5?",
+      "ground_truth": "The unity of India is artificial and was created by the British. Before British, India was never united.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.6560800671577454,
+          "source": "speech3.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_5",
+          "content": "The Hindu-Muslim problem is fundamentally a problem of nationalities. The Hindus and Muslims are not two communities but \ntwo nations. They have different religions, different cultures, different languages, and different historical backgrounds. The \nMuslims have a consciousness of being a separate nation. They want to have their own homeland, their own national state. The creation of Pakistan is inevitable. The Muslims cannot live under Hindu domination. They must have a separate state where \nthey can develop according to their own culture and civilization. The unity of India is artificial. It was created by the British. Before \nthe British, India was never united. The partition of India is the only solution to the Hindu-Muslim problem.",
+          "score": 0.6571838855743408,
+          "source": "speech5.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.6758189797401428,
+          "source": "speech6.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "According to the provided text (Document 5), Ambedkar states that the unity of India is artificial and was created by the British, implying that it may not be inherently strong or natural.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 0.5,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.4800000000000001,
+        "bleu": 0.3125180826911489,
+        "cosine": 0.6977072385412578,
+        "relevance": 0.6977072385412578,
+        "faithfulness": 0.4104642045391975
+      }
+    },
+    {
+      "id": 17,
+      "question": "What solution does Ambedkar propose for untouchables in Document 6?",
+      "ground_truth": "Annihilation of caste, organization, education, entering government services, and using political power.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.503798246383667,
+          "source": "speech6.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_4",
+          "content": "I was born in the untouchable community. I have faced the stigma of untouchability from my childhood. I know what it means to \nbe an untouchable. I know the humiliation, the insults, the injustices. I remember how we were not allowed to drink water from \nthe public well. I remember how we were not allowed to enter the temple. I remember how we were forced to live outside the \nvillage. Education is the key to liberation. Without education, the untouchables can never achieve their rightful place in society. I \nstruggled for education against all odds. I went to school sitting outside the classroom. I studied under street lights when I had no \nmoney for kerosene. But I was determined to get educated. Education gave me the strength to fight against injustice.",
+          "score": 0.6815218925476074,
+          "source": "speech4.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.8285200595855713,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Ambedkar, in the provided context, proposes that the emancipation of the untouchables can be achieved through annihilation of caste, fighting for their rights, organizing themselves, educating their children, entering government services, using political power to protect their interests, and acquiring political power.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.4074074074074074,
+        "bleu": 0.1550356003300103,
+        "cosine": 0.555329416268641,
+        "relevance": 0.555329416268641,
+        "faithfulness": 0.6755230157093732
+      }
+    },
+    {
+      "id": 18,
+      "question": "Compare the concept of 'enemy' in Documents 1 and 6",
+      "ground_truth": "In Document 1, the enemy is belief in shastras. In Document 6, the enemy is the caste system and social oppression.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.8852934241294861,
+          "source": "speech3.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.9464859366416931,
+          "source": "speech2.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.9698085188865662,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "The context provided does not contain Document 6, so I cannot compare the concept of 'enemy' between Documents 1 and 6 as no information is available about Document 6.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 0.3333333333333333,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.24000000000000002,
+        "bleu": 0.037776418604808376,
+        "cosine": 0.5928882281304345,
+        "relevance": 0.5928882281304345,
+        "faithfulness": 0.03085571926218228
+      }
+    },
+    {
+      "id": 19,
+      "question": "How does Ambedkar's view on religion differ between Documents 2 and 5?",
+      "ground_truth": "In Document 2, he praises Buddha's Dhamma as social moral code. In Document 5, he sees religion as dividing Hindus and Muslims into separate nations.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.7287288904190063,
+          "source": "speech2.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_5",
+          "content": "The Hindu-Muslim problem is fundamentally a problem of nationalities. The Hindus and Muslims are not two communities but \ntwo nations. They have different religions, different cultures, different languages, and different historical backgrounds. The \nMuslims have a consciousness of being a separate nation. They want to have their own homeland, their own national state. The creation of Pakistan is inevitable. The Muslims cannot live under Hindu domination. They must have a separate state where \nthey can develop according to their own culture and civilization. The unity of India is artificial. It was created by the British. Before \nthe British, India was never united. The partition of India is the only solution to the Hindu-Muslim problem.",
+          "score": 0.7447159290313721,
+          "source": "speech5.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.8131144046783447,
+          "source": "speech6.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Document 2, there is no direct mention of Ambedkar's view on religion. However, in Document 5 (not provided), it is stated that Ambedkar renounced Hinduism and converted to Buddhism, rejecting the caste system inherent in Hinduism. Thus, his view on religion between Documents 2 and 5 significantly differs, with him moving away from Hinduism towards Buddhism.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.6666666666666666,
+        "rouge_l": 0.2142857142857143,
+        "bleu": 0.05536871792196777,
+        "cosine": 0.5434506546897896,
+        "relevance": 0.5434506546897896,
+        "faithfulness": 0.4513747890520942
+      }
+    },
+    {
+      "id": 20,
+      "question": "What is the relationship between education and liberation in Ambedkar's philosophy?",
+      "ground_truth": "Education is essential for both personal liberation from oppression and political empowerment for social change.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_4",
+          "content": "I was born in the untouchable community. I have faced the stigma of untouchability from my childhood. I know what it means to \nbe an untouchable. I know the humiliation, the insults, the injustices. I remember how we were not allowed to drink water from \nthe public well. I remember how we were not allowed to enter the temple. I remember how we were forced to live outside the \nvillage. Education is the key to liberation. Without education, the untouchables can never achieve their rightful place in society. I \nstruggled for education against all odds. I went to school sitting outside the classroom. I studied under street lights when I had no \nmoney for kerosene. But I was determined to get educated. Education gave me the strength to fight against injustice.",
+          "score": 0.48707127571105957,
+          "source": "speech4.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.6523135900497437,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.6541730165481567,
+          "source": "speech2.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Dr. Ambedkar's philosophy, education is considered the key to liberation for the untouchables. He believes that without education, they can never achieve their rightful place in society and fight against injustice. Education gives them the strength and knowledge necessary to fight for their rights and emancipate themselves from societal discrimination.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.6666666666666666,
+        "rouge_l": 0.14925373134328357,
+        "bleu": 0.009584460320418755,
+        "cosine": 0.6414696030265583,
+        "relevance": 0.6414696030265583,
+        "faithfulness": 0.6681984413707674
+      }
+    },
+    {
+      "id": 21,
+      "question": "What year was Ambedkar born?",
+      "ground_truth": "This information is not available in the provided documents.",
+      "answerable": false,
+      "retrieved": [
+        {
+          "id": "chunk_5",
+          "content": "The Hindu-Muslim problem is fundamentally a problem of nationalities. The Hindus and Muslims are not two communities but \ntwo nations. They have different religions, different cultures, different languages, and different historical backgrounds. The \nMuslims have a consciousness of being a separate nation. They want to have their own homeland, their own national state. The creation of Pakistan is inevitable. The Muslims cannot live under Hindu domination. They must have a separate state where \nthey can develop according to their own culture and civilization. The unity of India is artificial. It was created by the British. Before \nthe British, India was never united. The partition of India is the only solution to the Hindu-Muslim problem.",
+          "score": 0.7932077646255493,
+          "source": "speech5.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.8106799125671387,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_2",
+          "content": "The Buddha's Dhamma is the only religion which the world can have if the world is to become a society of free and equal men. The Dhamma is social. It is a code of moral conduct for society. The center of Dhamma is man and the relationship between man \nand man. What is Dhamma? The Dhamma is to avoid evil, to do good, and to purify the mind. This is the teaching of all Buddhas. The Buddha was against ritualism. He condemned the performance of sacrifices. He rejected the authority of the Vedas. He \ndenied the efficacy of prayers. He discarded the usefulness of gods. He emphasized the law of Karma. He taught that every man \nhas the power to shape his own destiny. He made man the master of his own fate.",
+          "score": 0.8747603893280029,
+          "source": "speech2.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "Not available in the provided text. The context does not provide information on when Ambedkar was born.",
+      "metrics": {
+        "is_hit": false,
+        "reciprocal_rank": 0.0,
+        "precision_at_k": 0.0,
+        "rouge_l": 0.3846153846153846,
+        "bleu": 0.2061477352156375,
+        "cosine": 0.36200601475682365,
+        "relevance": 0.36200601475682365,
+        "faithfulness": 0.23491272270141345
+      }
+    },
+    {
+      "id": 22,
+      "question": "What specific restrictions did untouchables face according to Document 4?",
+      "ground_truth": "Not allowed to drink water from public wells, not allowed to enter temples, forced to live outside villages.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.4902075529098511,
+          "source": "speech6.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_4",
+          "content": "I was born in the untouchable community. I have faced the stigma of untouchability from my childhood. I know what it means to \nbe an untouchable. I know the humiliation, the insults, the injustices. I remember how we were not allowed to drink water from \nthe public well. I remember how we were not allowed to enter the temple. I remember how we were forced to live outside the \nvillage. Education is the key to liberation. Without education, the untouchables can never achieve their rightful place in society. I \nstruggled for education against all odds. I went to school sitting outside the classroom. I studied under street lights when I had no \nmoney for kerosene. But I was determined to get educated. Education gave me the strength to fight against injustice.",
+          "score": 0.5878806114196777,
+          "source": "speech4.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.8048456311225891,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "According to the provided text, untouchables were denied the right to education, the right to property, and were forced to do menial work, living outside the village. They were also denied access to public wells and temples.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 0.5,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.2545454545454546,
+        "bleu": 0.016508791086203053,
+        "cosine": 0.6177912204894805,
+        "relevance": 0.6177912204894805,
+        "faithfulness": 0.6274066359260972
+      }
+    },
+    {
+      "id": 23,
+      "question": "How does Ambedkar define social democracy in Document 3?",
+      "ground_truth": "A way of life recognizing liberty, equality, and fraternity as principles of life.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.442203164100647,
+          "source": "speech3.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.668788731098175,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.7080461978912354,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Document 3, Ambedkar defines social democracy as a way of life that recognizes liberty, equality, and fraternity as its principles.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.6470588235294118,
+        "bleu": 0.34079093551290196,
+        "cosine": 0.5387440038905987,
+        "relevance": 0.5387440038905987,
+        "faithfulness": 0.6037556409967871
+      }
+    },
+    {
+      "id": 24,
+      "question": "What does Ambedkar say about the Constitution in Document 3?",
+      "ground_truth": "It is not a mere lawyers' document but a vehicle of life whose spirit is always the spirit of age.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_3",
+          "content": "The constitutional remedies for the protection of minorities are of two kinds. First, fundamental rights which are justiciable. Second, directive principles which are not justiciable. The fundamental rights must include the right to equality, the right to \nfreedom, the right against exploitation, and the right to constitutional remedies. These rights are necessary to protect the \nminorities against the tyranny of the majority. The Constitution is not a mere lawyers' document. It is a vehicle of life, and its spirit is always the spirit of age. The Constitution \nmust provide for economic democracy as well as political democracy. Political democracy cannot last unless there lies at the base \nof it social democracy. What does social democracy mean? It means a way of life which recognizes liberty, equality, and fraternity \nas the principles of life.",
+          "score": 0.5706081390380859,
+          "source": "speech3.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_1",
+          "content": "ty would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition. I do not want to be the slave of others. I want to be free. I want to be equal. I want to be fraternal. This is my ideal. And \nthis ideal can be realized only through the abolition of caste.",
+          "score": 0.7238439321517944,
+          "source": "speech1.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.7300828695297241,
+          "source": "speech6.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "According to Document 3, Ambedkar views the Constitution as a vehicle of life and believes it should provide for both political and economic democracy, with the spirit being rooted in liberty, equality, and fraternity.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.25925925925925924,
+        "bleu": 0.07771324020744104,
+        "cosine": 0.3407323676197626,
+        "relevance": 0.3407323676197626,
+        "faithfulness": 0.5435809370111201
+      }
+    },
+    {
+      "id": 25,
+      "question": "How does Ambedkar characterize the Hindu-Muslim problem in Document 5?",
+      "ground_truth": "Fundamentally a problem of nationalities, not just communities, with two separate nations wanting separate homelands.",
+      "answerable": true,
+      "retrieved": [
+        {
+          "id": "chunk_5",
+          "content": "The Hindu-Muslim problem is fundamentally a problem of nationalities. The Hindus and Muslims are not two communities but \ntwo nations. They have different religions, different cultures, different languages, and different historical backgrounds. The \nMuslims have a consciousness of being a separate nation. They want to have their own homeland, their own national state. The creation of Pakistan is inevitable. The Muslims cannot live under Hindu domination. They must have a separate state where \nthey can develop according to their own culture and civilization. The unity of India is artificial. It was created by the British. Before \nthe British, India was never united. The partition of India is the only solution to the Hindu-Muslim problem.",
+          "score": 0.40506356954574585,
+          "source": "speech5.txt",
+          "rank": 1
+        },
+        {
+          "id": "chunk_6",
+          "content": "The untouchables are not a caste. They are a class. They are the broken men of Indian society. They were the original inhabitants \nof India who were defeated and subjugated by the invading Aryans. The untouchables were forced to live outside the village. They were denied the right to education. They were denied the right to property. They were condemned to do menial work. The solution to the problem of untouchability lies in the annihilation of caste. The untouchables must fight for their rights. They \nmust organize themselves. They must educate their children. They must enter the government services. They must use political \npower to protect their interests. The emancipation of the untouchables is impossible without political power.",
+          "score": 0.667561411857605,
+          "source": "speech6.txt",
+          "rank": 2
+        },
+        {
+          "id": "chunk_0",
+          "content": "The real remedy is to destroy the belief in the sanctity of the shastras. How do you expect to succeed if you allow the shastras to \ncontinue to be held as sacred and infallible? You must take a stand against the scriptures. Either you must stop the practice of \ncaste or you must stop believing in the shastras. You cannot have both. The problem of caste is not a problem of social reform. It \nis a problem of overthrowing the authority of the shastras. So long as people believe in the sanctity of the shastras, they will \nnever be able to get rid of caste. The work of social reform is like the work of a gardener who is constantly pruning the leaves and \nbranches of a tree without ever attacking the roots. The real enemy is the belief in the shastras. What is your ideal society? My ideal society would be based on liberty, equality, and fraternity. I do not want to be the slave of \ntradition.",
+          "score": 0.7153031826019287,
+          "source": "speech1.txt",
+          "rank": 3
+        }
+      ],
+      "generated_answer": "In Document 5, Ambedkar characterizes the Hindu-Muslim problem as fundamentally being a matter of nationalities, with Hindus and Muslims having different religions, cultures, languages, and historical backgrounds, leading to a consciousness among Muslims of being a separate nation and desiring their own homeland.",
+      "metrics": {
+        "is_hit": true,
+        "reciprocal_rank": 1.0,
+        "precision_at_k": 0.3333333333333333,
+        "rouge_l": 0.2711864406779661,
+        "bleu": 0.027142760758873147,
+        "cosine": 0.5404302915666092,
+        "relevance": 0.5404302915666092,
+        "faithfulness": 0.5399072667119861
+      }
+    }
+  ],
+  "time_seconds": 223.03466057777405
+}

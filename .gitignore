@@ -12,9 +12,6 @@ venv/
 chroma_store/*
 !chroma_store/.gitkeep
 
-# Assignment 2 results (keep folder, ignore contents)
-assignment2/results/*
-!assignment2/results/.gitkeep
 
 # Assignment 2 plots (keep folder, ignore contents)
 assignment2/plots/*
