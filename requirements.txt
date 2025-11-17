@@ -16,3 +16,8 @@ tokenizers<0.20
 
 # Utilities
 pydantic
+
+rouge-score
+scikit-learn
+ragas
+sacrebleu

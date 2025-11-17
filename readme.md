@@ -130,3 +130,44 @@ Small chunks (250/50) rocked it, especially on:
 Medium & Large were okay on word-matching (ROUGE/BLEU) but worse on staying real and adding noise.
 
 **Final tip:** Go with 250/50 splitting to cut hallucinations and get top retrieval.
+
+## 📌 Short Answers 
+
+### **Q: Which chunking strategy works best for the corpus?**  
+The **small chunk size (250 chars, 50 overlap)** performed the best.  
+It gave the highest Precision@3 (0.613) and the strongest Faithfulness score (0.625).  
+Overall, small chunks retrieve more focused context and reduce hallucination.
+
+---
+
+### **Q: What is the system’s current accuracy score?**  
+Here is the quick accuracy snapshot:
+
+- **Hit Rate:** 0.84  
+- **Precision@3:** 0.613  
+- **Faithfulness:** 0.625  
+
+These three metrics together represent the system’s practical accuracy and how grounded its answers are.
+
+---
+
+### **Q: What are the most common failure types?**  
+The main issues observed:
+
+1. **Retrieval noise** – especially with larger chunks, where unrelated text appears in top-k results.  
+2. **Paraphrasing mismatch** – the model answers correctly but uses different wording than the ground truth, lowering ROUGE/BLEU.  
+3. **Partial or unsupported statements** – answers sometimes mix correct info with details not directly supported by retrieved chunks.
+
+---
+
+### **Q: What specific improvements would boost performance?**  
+Recommended improvements (priority order):
+
+1. **Add a cross-encoder reranker** – retrieve top-50, then rerank. Major boost for Precision@K and faithfulness.  
+2. **Use stronger embedding models** such as `all-mpnet-base-v2` or `e5` for better semantic retrieval.  
+3. **Improve the prompt** so the model sticks closer to context wording and cites evidence.  
+4. **Adopt hybrid retrieval (BM25 + dense)** for better lexical + semantic coverage.  
+5. **Add an answer verification step** to filter out unsupported or hallucinated statements.
+
+---
+

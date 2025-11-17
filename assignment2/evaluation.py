@@ -23,9 +23,7 @@ from pipeline import chunk_text, embed_chunks, embed_query, load_text
 from vectorstore import build_vectorstore, retrieve, clear_collection, get_collection
 from app import format_prompt, generate_answer
 
-# ---------------------------------------------------------
 # Helpers: metrics implementations
-# ---------------------------------------------------------
 def hit_rate_per_question(retrieved_sources, gold_sources):
     """retrieved_sources: list of source filenames in rank order"""
     gold = set(gold_sources or [])
