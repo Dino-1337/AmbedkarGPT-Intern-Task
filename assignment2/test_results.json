@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "small": {
+      "hit_rate": 0.84,
+      "mrr": 0.7533333333333333,
+      "precision_at_3": 0.6133333333333333,
+      "mean_rouge_l": 1.0,
+      "mean_bleu": 1.0,
+      "mean_cosine": 1.0,
+      "mean_relevance": 1.0,
+      "mean_faithfulness": 0.4550416196806417,
+      "num_questions": 25,
+      "chunk_size": 250,
+      "overlap": 50
+    },
+    "medium": {
+      "hit_rate": 0.88,
+      "mrr": 0.7866666666666667,
+      "precision_at_3": 0.49333333333333335,
+      "mean_rouge_l": 1.0,
+      "mean_bleu": 1.0,
+      "mean_cosine": 1.0,
+      "mean_relevance": 1.0,
+      "mean_faithfulness": 0.4300783351104656,
+      "num_questions": 25,
+      "chunk_size": 550,
+      "overlap": 80
+    },
+    "large": {
+      "hit_rate": 0.88,
+      "mrr": 0.7933333333333334,
+      "precision_at_3": 0.38666666666666666,
+      "mean_rouge_l": 1.0,
+      "mean_bleu": 1.0,
+      "mean_cosine": 1.0,
+      "mean_relevance": 1.0,
+      "mean_faithfulness": 0.38414625144503506,
+      "num_questions": 25,
+      "chunk_size": 900,
+      "overlap": 100
+    }
+  },
+  "experiments": [
+    "small",
+    "medium",
+    "large"
+  ]
+}

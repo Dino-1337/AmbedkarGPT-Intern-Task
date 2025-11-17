@@ -1,0 +1,48 @@
+{
+  "summary": {
+    "small": {
+      "hit_rate": 0.84,
+      "mrr": 0.7533333333333333,
+      "precision_at_3": 0.6133333333333333,
+      "mean_rouge_l": 0.2864570034003492,
+      "mean_bleu": 0.10196626100926394,
+      "mean_cosine": 0.5170380246171515,
+      "mean_relevance": 0.5170380246171515,
+      "mean_faithfulness": 0.6248347983938569,
+      "num_questions": 25,
+      "chunk_size": 250,
+      "overlap": 50
+    },
+    "medium": {
+      "hit_rate": 0.88,
+      "mrr": 0.7866666666666667,
+      "precision_at_3": 0.49333333333333335,
+      "mean_rouge_l": 0.3319628150141436,
+      "mean_bleu": 0.11771429748819076,
+      "mean_cosine": 0.5595660734937716,
+      "mean_relevance": 0.5595660734937716,
+      "mean_faithfulness": 0.5412942984544306,
+      "num_questions": 25,
+      "chunk_size": 550,
+      "overlap": 80
+    },
+    "large": {
+      "hit_rate": 0.88,
+      "mrr": 0.7933333333333334,
+      "precision_at_3": 0.38666666666666666,
+      "mean_rouge_l": 0.3496418172767771,
+      "mean_bleu": 0.13189326323437478,
+      "mean_cosine": 0.5539793178563848,
+      "mean_relevance": 0.5539793178563848,
+      "mean_faithfulness": 0.4983697022120921,
+      "num_questions": 25,
+      "chunk_size": 900,
+      "overlap": 100
+    }
+  },
+  "experiments": [
+    "small",
+    "medium",
+    "large"
+  ]
+}

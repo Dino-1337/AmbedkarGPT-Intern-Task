@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store
+.env
+.venv/
+env/
+venv/
+
+# Chroma store (keep folder, ignore contents)
+chroma_store/*
+!chroma_store/.gitkeep
+
+# Assignment 2 results (keep folder, ignore contents)
+assignment2/results/*
+!assignment2/results/.gitkeep
+
+# Assignment 2 plots (keep folder, ignore contents)
+assignment2/plots/*
+!assignment2/plots/.gitkeep
+
+uploads/
+logs/
+*.log
+
+.ipynb_checkpoints/
+*.zip
+*.checkpoint
+*.cache/
+.cache/
