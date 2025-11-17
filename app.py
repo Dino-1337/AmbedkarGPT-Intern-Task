@@ -44,9 +44,7 @@ Provide a clear answer in 2–3 sentences.
     return prompt.strip()
 
 
-# ----------------------------------------------------------
 # LLM Generator (Mock + Real)
-# ----------------------------------------------------------
 def generate_answer(prompt, use_mock=False):
     """LLM se answer nikalna (mock mode helpful for evaluator)"""
 
