@@ -1,106 +1,89 @@
-# vectorstore.py
-import os
-os.environ["ANONYMIZED_TELEMETRY"] = "false"
 import chromadb
-import numpy as np
+from typing import List, Any
 from config import CHROMA_DIR, TOP_K
-from typing import List
 
-
-# ----------------------------------------------------------
-# Chroma client (local mode) - UPDATED FOR NEW CHROMA VERSION
-# ----------------------------------------------------------
+# Try persistent Chroma, fallback to ephemeral
 try:
-    # New Chroma client initialization
     client = chromadb.PersistentClient(path=CHROMA_DIR)
-except Exception as e:
-    print(f"Error initializing Chroma client: {e}")
-    # Fallback to ephemeral client if persistent fails
+except Exception:
     client = chromadb.EphemeralClient()
 
 
-# ----------------------------------------------------------
-# Create or load collection
-# ----------------------------------------------------------
 def get_collection():
-    """Local Chroma collection guaranteed create/load ho jayega"""
+    """Local Chroma collection (create if not exists)"""
     return client.get_or_create_collection(
         name="rag_store",
-        metadata={"hnsw:space": "cosine"}  # cosine similarity best for MiniLM
+        metadata={"hnsw:space": "cosine"}
     )
 
 
-# ----------------------------------------------------------
-# Build vectorstore (called after chunking + embedding)
-# ----------------------------------------------------------
-def build_vectorstore(chunks: List[str], embeddings: List[List[float]]):
-    """Chunks + embeddings ko Chroma mein store karta hai"""
-    collection = get_collection()
+def build_vectorstore(chunks: List[str], embeddings: List[Any]):
+    """Store chunks and embeddings in Chroma; replace any existing index"""
+    coll = get_collection()
+    clear_collection(coll)
 
-    # IDs generate karna zaroori hota hai
     ids = [f"chunk_{i}" for i in range(len(chunks))]
 
-    # Purane index clean karna (Assignment 1 mein ek hi document hoga)
-    clear_collection(collection)
+    # Ensure embeddings are plain nested lists (not numpy)
+    emb_lists = []
+    for e in embeddings:
+        if hasattr(e, "tolist"):
+            emb_lists.append(e.tolist())
+        else:
+            emb_lists.append(e)
 
-    # Ensure embeddings are lists, not numpy arrays
-    embeddings_as_lists = [emb.tolist() if hasattr(emb, 'tolist') else emb for emb in embeddings]
-
-    # Add to Chroma
-    collection.add(
+    coll.add(
         ids=ids,
         documents=chunks,
-        embeddings=embeddings_as_lists
+        embeddings=emb_lists
     )
 
 
-# ----------------------------------------------------------
-# Retrieval wrapper
-# ----------------------------------------------------------
-def retrieve(query_embedding, top_k=TOP_K):
-    """Query embedding se top-k chunks retrieve karta hai"""
-    collection = get_collection()
+def retrieve(query_embedding, top_k: int = TOP_K):
+    """Return list of hits: {id, content, score} where score is similarity (0..1)"""
+    coll = get_collection()
 
-    # Convert query embedding to list if it's a numpy array
-    if hasattr(query_embedding, 'tolist'):
+    # normalize input to plain list
+    if hasattr(query_embedding, "tolist"):
         query_embedding = query_embedding.tolist()
-    
-    # Ensure it's a list of floats, not a nested list
     if isinstance(query_embedding, list) and len(query_embedding) > 0 and isinstance(query_embedding[0], list):
         query_embedding = query_embedding[0]
 
-    results = collection.query(
+    results = coll.query(
         query_embeddings=[query_embedding],
         n_results=top_k
     )
 
-    # Agar koi result nahi मिला
-    if not results or len(results["documents"]) == 0:
+    if not results or not results.get("documents"):
         return []
 
-    hits = []
     docs = results["documents"][0]
-    ids = results["ids"][0]
-    dists = results["distances"][0]  # cosine distance
+    ids = results.get("ids", [[]])[0]
+    dists = results.get("distances", [[]])[0]  # lower = closer if using distance
 
+    hits = []
     for i in range(len(docs)):
+        # Convert distance -> similarity (simple linear transform)
+        try:
+            dist = float(dists[i])
+            sim = max(0.0, 1.0 - dist)
+        except Exception:
+            sim = 0.0
+
         hits.append({
-            "id": ids[i],
+            "id": ids[i] if i < len(ids) else f"chunk_{i}",
             "content": docs[i],
-            "score": float(dists[i])  # distance = similarity ka opposite
+            "score": float(sim)
         })
 
     return hits
 
 
-# ----------------------------------------------------------
-# Utility: Clear old vectors
-# ----------------------------------------------------------
 def clear_collection(collection):
-    """Purane vectors remove kar deta hai (fresh build ke liye)"""
+    """Delete all items in collection"""
     try:
-        all_items = collection.get()
-        if all_items and "ids" in all_items and all_items["ids"]:
-            collection.delete(all_items["ids"])
-    except:
-        pass  # Agar empty hai toh koi issue nahi
+        data = collection.get()
+        if data and "ids" in data and data["ids"]:
+            collection.delete(ids=data["ids"])
+    except Exception:
+        pass
