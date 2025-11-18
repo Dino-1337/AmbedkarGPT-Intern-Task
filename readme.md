@@ -1,6 +1,6 @@
 # 🧠 AmbedkarGPT – RAG System (Assignment 1 & 2)
 
-A simple Retrieval-Augmented Generation (RAG) setup using:
+A Retrieval-Augmented Generation (RAG) setup using:
 
 - Local ChromaDB
 - Sentence Transformers (MiniLM)
@@ -10,7 +10,7 @@ A simple Retrieval-Augmented Generation (RAG) setup using:
 
 This repo has two working parts:
 
-- Assignment 1 → Basic RAG system
+- Assignment 1 → RAG system
 - Assignment 2 → Testing different text-splitting methods & checking results
 
 Made easy for a recruiter to clone, run, and check.
@@ -30,18 +30,16 @@ AMBEDKARGPT-INTERN-TASK
 ├── speech.txt             # Content for Assignment 1
 │
 ├── assignment2/
-│   ├── corpus/            # 6 docs (speech1.txt ... speech6.txt)
-│   ├── evaluation.py      # Auto-testing script
+│   ├── corpus/            # 6 docs corpus
+│   ├── evaluation.py      # Different methods evaluation script 
 │   ├── test_dataset.json  # 25 questions (given)
 │   ├── results/           # Logs for each test
 │   ├── results_analysis.md# Deep dive on splitting methods
-│   ├── plot_metrics.py    # Makes charts
-│   └── plots/             # Saved charts
 │
 └── README.md              # This file
 ```
 
-## 🟦 Assignment 1 — Basic RAG System
+## 🟦 Assignment 1 — RAG System
 
 ### ✔ What it does
 - Load docs → Split text → Turn into embeddings (MiniLM)
@@ -51,23 +49,27 @@ AMBEDKARGPT-INTERN-TASK
 - Ask questions via command line
 
 ### ▶️ How to Run Assignment 1
-
-1. Install stuff:
+1. Activate python virtual environment:
+   ```
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
+2. Install Dependencies:
    ```
    pip install -r requirements.txt
    ```
 
-2. Start Ollama & get Mistral:
+3. Start Ollama & get Mistral:
    ```
    ollama pull mistral
    ```
 
-3. Run the app:
+4. Run the app:
    ```
    python app.py
    ```
 
-4. Ask questions like:
+5. Ask questions like:
    ```
    Enter question: What is the remedy for the caste system?
    ```
@@ -90,26 +92,33 @@ Checks these metrics:
 - Semantic Similarity (Cosine)
 - Faithfulness (how grounded answers are)
 
-### 📌 Quick Run (Mock Mode) — No Ollama needed
-```
-cd assignment2
-$env:MOCK_MODE = "1"
-python evaluation.py --out mock_results.json
-```
+## 📌 Running the Evaluation (Assignment 2)
 
-### 📌 Full Run (Real LLM)
-Make sure Ollama Mistral is running.
-```
-cd assignment2
-Remove-Item Env:\MOCK_MODE
-python evaluation.py --use_mock 0 --out test_results_real.json
-```
+1. Make sure Ollama is installed and the Mistral model is available:
+   ```bash
+   ollama pull mistral
+   ```
 
-### 📊 Make Charts
+2. Now run the evaluation script:
+   ```bash
+   cd assignment2
+   python evaluation.py
+   ```
+
+### 📁 Output Files Generated
+
+Running the above command will produce:
+
 ```
-python plot_metrics.py
+assignment2/
+│
+├── results/
+│   ├── results_small.json
+│   ├── results_medium.json
+│   ├── results_large.json
+│
+└── test_results_real.json   ← Combined summary file
 ```
-Charts saved to `assignment2/plots/`.
 
 ### 📄 Deep Analysis
 Check `assignment2/results_analysis.md` for:
@@ -121,13 +130,13 @@ Check `assignment2/results_analysis.md` for:
 
 ## 🏆 Quick Wins
 
-Small chunks (250/50) rocked it, especially on:
+Small chunks (250/50) was produced better results in this dataset, especially on:
 
-- Precision@3
+- Precision
 - Faithfulness
 - Clean retrieval
 
-Medium & Large were okay on word-matching (ROUGE/BLEU) but worse on staying real and adding noise.
+Medium & Large were okay on word-matching (ROUGE/BLEU) but slightly worse on staying real and adding noise.
 
 **Final tip:** Go with 250/50 splitting to cut hallucinations and get top retrieval.
 

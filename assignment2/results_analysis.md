@@ -51,9 +51,8 @@ Find the **best way to split text** for getting good retrieval and answers.
 - **Add Reranking:** Grab top-50 chunks, rerank with a cross-encoder, pick top-3—it'll really help **Precision@3**.
 - **Cite Sources:** Add ways to show where answers come from for easier checking.
 
-## How to Run It Again
-- Quick test: `cd assignment2; $env:MOCK_MODE = "1"; python evaluation.py --out mock_results.json`
-- Full test: `python evaluation.py --use_mock 0 --out test_results_real.json`
+## How to Run
+- Full test: `python evaluation.py`
 
 ## Files Made
 - `test_results_real.json`: Main numbers
@@ -92,11 +91,10 @@ The main issues observed:
 
 ---
 
-### **Q: What specific improvements would boost performance?**  
-Recommended improvements (priority order):
+### Q: What improvements would boost performance?
 
-1. **Add a cross-encoder reranker** – retrieve top-50, then rerank. Major boost for Precision@K and faithfulness.  
-2. **Use stronger embedding models** such as `all-mpnet-base-v2` or `e5` for better semantic retrieval.  
-3. **Improve the prompt** so the model sticks closer to context wording and cites evidence.  
-4. **Adopt hybrid retrieval (BM25 + dense)** for better lexical + semantic coverage.  
-5. **Add an answer verification step** to filter out unsupported or hallucinated statements.
+1. **Cross-encoder reranker** – Get top-50 chunks, rerank them, and pick the best ones. This improves Precision@K and keeps answers more accurate.
+2. **Better embedding models** – Using models like `mpnet` or `e5` will give better semantic matching.
+3. **Stronger prompt** – Asking the model to stick closely to the context reduces mistakes.
+4. **Hybrid retrieval (BM25 + dense)** – Combines keyword search and semantic search for better coverage.
+5. **Note on dataset** – Our documents are very short (only one paragraph each). Because of this, some methods like reranking or hybrid retrieval **will not** show their full benefit. These improvements work much better when the dataset is bigger and more detailed.

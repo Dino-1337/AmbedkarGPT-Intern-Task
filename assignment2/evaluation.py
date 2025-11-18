@@ -13,7 +13,7 @@ from nltk.tokenize import word_tokenize
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from rouge_score import rouge_scorer
 
-sys.path.append("..")  # allow importing pipeline.py, vectorstore.py, app.py in project root
+sys.path.append("..") 
 
 from pipeline import chunk_text, embed_chunks, embed_query, load_text
 from vectorstore import build_vectorstore, retrieve, clear_collection, get_collection
@@ -94,6 +94,7 @@ def build_index_from_corpus(corpus_dir, chunk_size, overlap):
 
     all_chunks = []
     chunk_meta = []
+
     for fpath in file_list:
         text = load_text(fpath)
         chunks = chunk_text(text, chunk_size=chunk_size, overlap=overlap)
@@ -118,7 +119,7 @@ def build_index_from_corpus(corpus_dir, chunk_size, overlap):
     return all_chunks, chunk_meta, id_map, embeddings
 
 
-def run_evaluation(corpus_dir, test_dataset_path, out_path, chunk_sizes, top_k=3, use_mock=True):
+def run_evaluation(corpus_dir, test_dataset_path, out_path, chunk_sizes, top_k=3):
     with open(test_dataset_path, "r", encoding="utf-8") as f:
         tests = json.load(f)["test_questions"]
 
@@ -161,15 +162,18 @@ def run_evaluation(corpus_dir, test_dataset_path, out_path, chunk_sizes, top_k=3
             retrieved_sources = []
             retrieved_chunk_embs = []
             retrieved_info = []
+
             for rank, h in enumerate(hits, start=1):
                 hid = h.get("id")
                 src = id_map.get(hid, None)
                 retrieved_sources.append(src)
+
                 try:
                     idx = int(hid.replace("chunk_", ""))
                     retrieved_chunk_embs.append(chunk_embeddings[idx])
                 except Exception:
                     retrieved_chunk_embs.append(None)
+
                 retrieved_info.append({
                     "id": hid,
                     "content": h.get("content"),
@@ -179,16 +183,7 @@ def run_evaluation(corpus_dir, test_dataset_path, out_path, chunk_sizes, top_k=3
                 })
 
             prompt = format_prompt(question, retrieved_info)
-
-            if use_mock:
-                if ground_truth:
-                    gen_answer = ground_truth
-                elif retrieved_info:
-                    gen_answer = retrieved_info[0]["content"][:200]
-                else:
-                    gen_answer = "Not available in the provided text."
-            else:
-                gen_answer = generate_answer(prompt, use_mock=False)
+            gen_answer = generate_answer(prompt)
 
             is_hit = bool(hit_rate_per_question(retrieved_sources, gold_sources))
             rr = reciprocal_rank(retrieved_sources, gold_sources)
@@ -199,6 +194,7 @@ def run_evaluation(corpus_dir, test_dataset_path, out_path, chunk_sizes, top_k=3
 
             ans_emb = embed_query(gen_answer) if gen_answer else None
             gt_emb = gt_embeddings.get(qid, None)
+
             cos_sim = cosine_sim(ans_emb, gt_emb) if (ans_emb is not None and gt_emb is not None) else 0.0
             relevance = answer_relevance(ans_emb, gt_emb) if (ans_emb is not None and gt_emb is not None) else 0.0
             faith = faithfulness_score(ans_emb, [e for e in retrieved_chunk_embs if e is not None])
@@ -217,7 +213,6 @@ def run_evaluation(corpus_dir, test_dataset_path, out_path, chunk_sizes, top_k=3
                 "id": qid,
                 "question": question,
                 "ground_truth": ground_truth,
-                "answerable": item.get("answerable", True),
                 "retrieved": retrieved_info,
                 "generated_answer": gen_answer,
                 "metrics": {
@@ -265,9 +260,11 @@ def run_evaluation(corpus_dir, test_dataset_path, out_path, chunk_sizes, top_k=3
         print(f" -> Saved experiment results to {fname}")
 
     merged = {"summary": results_all, "experiments": list(chunk_sizes.keys())}
-    out_file = out_path or "test_results.json"
+    out_file = out_path or "test_results_real.json"
+
     with open(out_file, "w", encoding="utf-8") as f:
         json.dump(merged, f, indent=2)
+
     print(f"\nAll experiments done. Summary written to {out_file}")
 
 
@@ -284,15 +281,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--corpus_dir", type=str, default="corpus")
     parser.add_argument("--test_dataset", type=str, default="test_dataset.json")
-    parser.add_argument("--out", type=str, default="test_results.json")
+    parser.add_argument("--out", type=str, default="test_results_real.json")
     parser.add_argument("--top_k", type=int, default=3)
-    parser.add_argument("--use_mock", type=int, default=1)
     parser.add_argument("--chunk_sizes", type=str,
                         default="small:250:50,medium:550:80,large:900:100")
-    args = parser.parse_args()
 
+    args = parser.parse_args()
     chunk_sizes = parse_chunk_sizes(args.chunk_sizes)
-    use_mock = bool(args.use_mock) or (os.getenv("MOCK_MODE", "0") == "1")
 
     os.makedirs("results", exist_ok=True)
 
@@ -301,6 +296,5 @@ if __name__ == "__main__":
         test_dataset_path=args.test_dataset,
         out_path=args.out,
         chunk_sizes=chunk_sizes,
-        top_k=args.top_k,
-        use_mock=use_mock
+        top_k=args.top_k
     )
