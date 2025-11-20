@@ -138,7 +138,7 @@ Small chunks (250/50) was produced better results in this dataset, especially on
 
 Medium & Large were okay on word-matching (ROUGE/BLEU) but slightly worse on staying real and adding noise.
 
-**Final tip:** Go with 250/50 splitting to cut hallucinations and get top retrieval.
+**Final tip:** Go with 250/50 splitting to cut hallucinations and get top retrieval
 
 
 
