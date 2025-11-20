@@ -117,7 +117,7 @@ assignment2/
 │   ├── results_medium.json
 │   ├── results_large.json
 │
-└── test_results_real.json   ← Combined summary file
+└── test_results_real.json   ← Combined summary  file
 ```
 
 ### 📄 Deep Analysis
