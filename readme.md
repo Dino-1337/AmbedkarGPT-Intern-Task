@@ -121,12 +121,7 @@ assignment2/
 ```
 
 ### 📄 Deep Analysis
-Check `assignment2/results_analysis.md` for:
-
-- Which splitting method won
-- Metric tables
-- What went wrong & why
-- Tips to make RAG better
+AT `assignment2/results_analysis.md` :
 
 ## 🏆 Quick Wins
 
